@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:id="@+id/fakeActionBar"
+        style="?android:attr/actionBarStyle"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="Swipe down to refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swipeToRefreshText"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:textColor="#0099cc"
+            android:textSize="18sp" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <swipetorefresh.OverscrollListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/listView1"
+            android:entries="@array/planets_array" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/loadingBars">
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loadingBar1"
+                android:layout_weight="1"
+                android:progress="50"
+                android:scaleX="-1.0"
+                android:scaleY="1.0"
+                android:layout_marginTop="-7dp" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loadingBar2"
+                android:layout_weight="1"
+                android:progress="50"
+                android:minHeight="0dp"
+                android:layout_marginTop="-7dp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
