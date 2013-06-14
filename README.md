@@ -10,3 +10,7 @@ The idea of the pattern is that when a ListView is positioned at the beginning, 
 
 - [Blog post](https://blog.neteril.org/blog/2013/06/07/xamarin-android-swipe-down-to-refresh/) explaining some key parts of this implementation
 - [Video](https://neteril.org/xamarin/swipe-down-to-refresh-video.html) of the pattern in action
+
+## License
+
+This code is available under the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0). Reuse as much as you want.
